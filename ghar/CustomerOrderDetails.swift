@@ -229,10 +229,50 @@ class CustomerOrderDetails: UIViewController {
     let vegBurgerStepper = UIStepper()
     let vegBurgerStepperLabel = UILabel()
     var vegBurgerStepperLabelCounter = 0
+    
+    let chickenBurgerStepper = UIStepper()
+    let chickenBurgerStepperLabel = UILabel()
+    var chickenBurgerStepperLabelCounter = 0
 
     let  sidduStepper = UIStepper()
     let  sidduStepperLabel = UILabel()
     var  sidduStepperLabelCounter = 0
+    
+    
+    let vegMomoStepper = UIStepper()
+    let vegMomoStepperLabel = UILabel()
+    var vegMomoStepperLabelCounter = 0
+
+    let chickenMomoStepper = UIStepper()
+    let chickenMomoStepperLabel = UILabel()
+    var chickenMomoStepperLabelCounter = 0
+
+    let vegNuggetsStepper = UIStepper()
+    let vegNuggetsStepperLabel = UILabel()
+    var vegNuggetsStepperLabelCounter = 0
+
+    let  chickenNuggetsStepper = UIStepper()
+    let  chickenNuggetsStepperLabel = UILabel()
+    var  chickenNuggetsStepperLabelCounter = 0
+
+
+    let springRollStepper = UIStepper()
+    let springRollStepperLabel = UILabel()
+    var springRollStepperLabelCounter = 0
+
+    let breadBurgerStepper = UIStepper()
+    let breadBurgerStepperLabel = UILabel()
+    var breadBurgerStepperLabelCounter = 0
+
+    let chickenFingersStepper = UIStepper()
+    let chickenFingersStepperLabel = UILabel()
+    var chickenFingersStepperLabelCounter = 0
+
+
+    let  samosaStepper = UIStepper()
+    let  samosaStepperLabel = UILabel()
+    var  samosaStepperLabelCounter = 0
+
 
     let masalaPapadStepper = UIStepper()
     let masalaPapadStepperLabel = UILabel()
@@ -398,6 +438,14 @@ class CustomerOrderDetails: UIViewController {
     let iceCreamStepper = UIStepper()
     let iceCreamStepperLabel = UILabel()
     var iceCreamStepperLabelCounter = 0
+    
+    let wafflesStepper = UIStepper()
+    let wafflesStepperLabel = UILabel()
+    var wafflesStepperLabelCounter = 0
+
+    let nutellaWafflesStepper = UIStepper()
+    let nutellaWafflesStepperLabel = UILabel()
+    var nutellaWafflesStepperLabelCounter = 0
 
     let soojiHalwaStepper = UIStepper()
     let soojiHalwaStepperLabel = UILabel()
@@ -740,12 +788,75 @@ class CustomerOrderDetails: UIViewController {
         vegBurgerStepperLabel.text = "\(sender.value)"
         calculateTotal()
     }
+    @objc func updateChickenBurgerStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        chickenBurgerStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
     @objc func updateSidduStepper(_ sender:UIStepper)
     {
         print(sender.value)
          sidduStepperLabel.text = "\(sender.value)"
         calculateTotal()
     }
+    
+    
+    @objc func updateVegMomoStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        vegMomoStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+    @objc func updateChickenMomoStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        chickenMomoStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+    @objc func updateVegNuggetsStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        vegNuggetsStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+    @objc func updateChickenNuggetsStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+            chickenNuggetsStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+    @objc func updateSpringRollStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        springRollStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+
+    @objc func updateBreadBurgerStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        breadBurgerStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+    @objc func updateChickenFingersStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        chickenFingersStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+    @objc func updateSamosaStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+            samosaStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
     
     @objc func updateMasalaPapadStepper(_ sender:UIStepper)
     {
@@ -1031,6 +1142,20 @@ class CustomerOrderDetails: UIViewController {
         iceCreamStepperLabel.text = "\(sender.value)"
         calculateTotal()
     }
+    @objc func updateWafflesStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        wafflesStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+
+    @objc func updateNutellaWafflesStepper(_ sender:UIStepper)
+    {
+        print(sender.value)
+        nutellaWafflesStepperLabel.text = "\(sender.value)"
+        calculateTotal()
+    }
+    
     
     @objc func updateCreamRollStepper(_ sender:UIStepper)
     {
@@ -1105,7 +1230,17 @@ class CustomerOrderDetails: UIViewController {
         let pastaPrice = 180.0
         let noodlesPrice = 170.0
         let vegBurgerPrice = 150.0
+        let chickenBurgerPrice = 200.0
         let sidduPrice = 120.0
+        let vegMomoPrice = 130.0
+        let chickenMomoPrice = 160.0
+        let vegNuggetsPrice = 180.0
+        let chickenNuggetsPrice = 250.0
+        let springRollPrice = 120.0
+        let breadBurgerPrice = 130.0
+        let chickenFingersPrice = 250.0
+        let samosaPrice = 90.0
+
         
         // lunch dinner
         let riceBowlPrice = 150.0
@@ -1136,8 +1271,8 @@ class CustomerOrderDetails: UIViewController {
         let chocolatePancakePrice = 180.0
         let bananaChocolatePancakePrice = 200.0
         let nutellaPancakePrice = 220.0
-        let cornflakesPrice = 150.0
-        let chocosPrice = 150.0
+        let cornflakesPrice = 120.0
+        let chocosPrice = 120.0
         let alooPuriPrice = 150.0
         
         //Quick bites
@@ -1160,6 +1295,8 @@ class CustomerOrderDetails: UIViewController {
         let soojiHalwaPrice = 90.0
         let coffeePopsiclePrice = 90.0
         let iceCreamPrice = 120.0
+        let wafflesPrice = 180.0
+        let nutellaWafflesPrice = 250.0
         
         // Quantity
         // hot
@@ -1218,7 +1355,16 @@ class CustomerOrderDetails: UIViewController {
         let pastaQty = pastaStepper.value
         let noodlesQty = noodlesStepper.value
         let vegBurgerQty = vegBurgerStepper.value
+        let chickenBurgerQty = chickenBurgerStepper.value
         let sidduQty = sidduStepper.value
+        let vegMomoQty = vegMomoStepper.value
+        let chickenMomoQty = chickenMomoStepper.value
+        let vegNuggetsQty = vegNuggetsStepper.value
+        let chickenNuggetsQty = chickenNuggetsStepper.value
+        let springRollQty = springRollStepper.value
+        let breadBurgerQty = breadBurgerStepper.value
+        let chickenFingersQty = chickenFingersStepper.value
+        let samosaQty = samosaStepper.value
         
         // breakfast
         let pohaQty = pohaStepper.value
@@ -1263,6 +1409,8 @@ class CustomerOrderDetails: UIViewController {
         let soojiHalwaQty = soojiHalwaStepper.value
         let coffeePopsicleQty = coffeePopsicleStepper.value
         let iceCreamQty = iceCreamStepper.value
+        let wafflesQty = wafflesStepper.value
+        let nutellaWafflesQty = nutellaWafflesStepper.value
 
         // Quick bites
         let masalaPapadQty = masalaPapadStepper.value
@@ -1280,7 +1428,7 @@ class CustomerOrderDetails: UIViewController {
         
         let shakesTotal =  (bananaShakePrice * bananaShakeQty) + (oreoShakePrice * oreoShakeQty) + (blueberryShakePrice * blueberryShakeQty) + (chocoPeanutButterShakePrice * chocoPeanutButterShakeQty)
         
-        let snacksTotal = (plainMaggiePrice * plainMaggieQty) + (butterMaggiePrice * butterMaggieQty) + (vegMaggiePrice * vegMaggieQty) + (cheeseMaggiePrice * cheeseMaggieQty) + (bunMaskaPrice * bunMaskaQty) + (masalaPavPrice * masalaPavQty) + (chutneySandwichPrice * chutneySandwichQty) + (alooSandwichPrice * alooSandwichQty) + (vegSandwichPrice * vegSandwichQty) + (breadOmeletteSandwichPrice * breadOmeletteSandwichQty) + (mushroomSandwichPrice * mushroomSandwichQty) + (cheeseChilliToastPrice * cheeseChilliToastQty) + (pavBhajiPrice * pavBhajiQty) + (butterToastPrice * butterToastQty) + (peanutButterToastPrice * peanutButterToastQty) + (breadPakoraPrice * breadPakoraQty) + (macAndCheesePrice * macAndCheeseQty) + (pastaPrice * pastaQty)  + (noodlesPrice * noodlesQty) + (vegBurgerPrice * vegBurgerQty) + (sidduPrice * sidduQty)
+        let snacksTotal = (plainMaggiePrice * plainMaggieQty) + (butterMaggiePrice * butterMaggieQty) + (vegMaggiePrice * vegMaggieQty) + (cheeseMaggiePrice * cheeseMaggieQty) + (bunMaskaPrice * bunMaskaQty) + (masalaPavPrice * masalaPavQty) + (chutneySandwichPrice * chutneySandwichQty) + (alooSandwichPrice * alooSandwichQty) + (vegSandwichPrice * vegSandwichQty) + (breadOmeletteSandwichPrice * breadOmeletteSandwichQty) + (mushroomSandwichPrice * mushroomSandwichQty) + (cheeseChilliToastPrice * cheeseChilliToastQty) + (pavBhajiPrice * pavBhajiQty) + (butterToastPrice * butterToastQty) + (peanutButterToastPrice * peanutButterToastQty) + (breadPakoraPrice * breadPakoraQty) + (macAndCheesePrice * macAndCheeseQty) + (pastaPrice * pastaQty)  + (noodlesPrice * noodlesQty) + (vegBurgerPrice * vegBurgerQty) +  (chickenBurgerPrice * chickenBurgerQty) + (sidduPrice * sidduQty) + (vegMomoPrice * vegMomoQty) + (chickenMomoPrice * chickenMomoQty) + (vegNuggetsPrice * vegNuggetsQty) + (chickenNuggetsPrice * chickenNuggetsQty) + (springRollPrice * springRollQty) + (breadBurgerPrice * breadBurgerQty) + (chickenFingersPrice * chickenFingersQty) + (samosaPrice * samosaQty)
         
         let lunchDinnerTotal = (riceBowlPrice * riceBowlQty) + (chapatiThaliPrice * chapatiThaliQty) + (fullThaliPrice * fullThaliQty) + (pulavPrice * pulavQty) + (friedRicePrice * friedRiceQty) + (curdRicePrice * curdRiceQty) + (sabjiPrice * sabjiQty) + (curryPrice * curryQty) + (chapatiPrice * chapatiQty) + (butterChapatiPrice * butterChapatiQty) + (ajwainPlainParanthaPrice * ajwainPlainParanthaQty)
         
@@ -1290,7 +1438,7 @@ class CustomerOrderDetails: UIViewController {
         
         let munchiesTotal = (creamRollPrice * creamRollQty) + (toastiesPrice * toastiesQty)
         
-        let dessertsTotal = (chocolateWafflePrice * chocolateWaffleQty)  + (attaHalwaPrice * attaHalwaQty) + (soojiHalwaPrice * soojiHalwaQty) + (coffeePopsiclePrice * coffeePopsicleQty) + (iceCreamPrice * iceCreamQty)
+        let dessertsTotal = (chocolateWafflePrice * chocolateWaffleQty)  + (attaHalwaPrice * attaHalwaQty) + (soojiHalwaPrice * soojiHalwaQty) + (coffeePopsiclePrice * coffeePopsicleQty) + (iceCreamPrice * iceCreamQty) + (wafflesPrice * wafflesQty) + (nutellaWafflesPrice * nutellaWafflesQty)
         
         
         let total = hotTotal + coldTotal + shakesTotal + snacksTotal + lunchDinnerTotal + QuickBitesTotal + breakfastTotal + munchiesTotal + dessertsTotal
@@ -1366,7 +1514,16 @@ class CustomerOrderDetails: UIViewController {
             pastaStepperLabelCounter = (selectedCustomer?.pasta.intValue)!
             noodlesStepperLabelCounter = (selectedCustomer?.noodles.intValue)!
             vegBurgerStepperLabelCounter = (selectedCustomer?.vegBurger.intValue)!
+            chickenBurgerStepperLabelCounter = (selectedCustomer?.chickenBurger.intValue)!
             sidduStepperLabelCounter = (selectedCustomer?.siddu.intValue)!
+            vegMomoStepperLabelCounter = (selectedCustomer?.vegMomo.intValue)!
+            chickenMomoStepperLabelCounter = (selectedCustomer?.chickenMomo.intValue)!
+            vegNuggetsStepperLabelCounter = (selectedCustomer?.vegNuggets.intValue)!
+            chickenNuggetsStepperLabelCounter = (selectedCustomer?.chickenNuggets.intValue)!
+            springRollStepperLabelCounter = (selectedCustomer?.springRoll.intValue)!
+            breadBurgerStepperLabelCounter = (selectedCustomer?.breadBurger.intValue)!
+            chickenFingersStepperLabelCounter = (selectedCustomer?.chickenFingers.intValue)!
+            samosaStepperLabelCounter = (selectedCustomer?.samosa.intValue)!
             
             
             // Quick bites
@@ -1421,11 +1578,16 @@ class CustomerOrderDetails: UIViewController {
             chocolateWaffleStepperLabelCounter = (selectedCustomer?.chocolateWaffle.intValue)!
             attaHalwaStepperLabelCounter = (selectedCustomer?.attaHalwa.intValue)!
             soojiHalwaStepperLabelCounter = (selectedCustomer?.soojiHalwa.intValue)!
-            iceCreamStepperLabelCounter = (selectedCustomer?.iceCream.intValue)!
             coffeePopsicleStepperLabelCounter = (selectedCustomer?.coffeePopsicle.intValue)!
+            iceCreamStepperLabelCounter = (selectedCustomer?.iceCream.intValue)!
+            wafflesStepperLabelCounter = (selectedCustomer?.waffles.intValue)!
+            nutellaWafflesStepperLabelCounter = (selectedCustomer?.nutellaWaffles.intValue)!
+            
             
             setupMenuCard()
+        
         }
+        
         // UI
         setupMenuCard()
     }
@@ -1441,7 +1603,7 @@ class CustomerOrderDetails: UIViewController {
             newCustomer.id = CustomerList.count as NSNumber
             newCustomer.name = CustomerNameTF.text
             if newCustomer.name == "" {
-                newCustomer.name = "Ronaldo is better than Messi"
+                newCustomer.name = "Graahak"
             }
             
             // hot
@@ -1496,7 +1658,17 @@ class CustomerOrderDetails: UIViewController {
             newCustomer.pasta = NSNumber(value: Int(Double(pastaStepperLabel.text!)!))
             newCustomer.noodles = NSNumber(value: Int(Double(noodlesStepperLabel.text!)!))
             newCustomer.vegBurger = NSNumber(value: Int(Double(vegBurgerStepperLabel.text!)!))
+            newCustomer.chickenBurger = NSNumber(value: Int(Double(chickenBurgerStepperLabel.text!)!))
             newCustomer.siddu = NSNumber(value: Int(Double(sidduStepperLabel.text!)!))
+            newCustomer.vegMomo = NSNumber(value: Int(Double(vegMomoStepperLabel.text!)!))
+            newCustomer.chickenMomo = NSNumber(value: Int(Double(chickenMomoStepperLabel.text!)!))
+            newCustomer.vegNuggets = NSNumber(value: Int(Double(vegNuggetsStepperLabel.text!)!))
+            newCustomer.chickenNuggets = NSNumber(value: Int(Double(chickenNuggetsStepperLabel.text!)!))
+            newCustomer.springRoll = NSNumber(value: Int(Double(springRollStepperLabel.text!)!))
+            newCustomer.breadBurger = NSNumber(value: Int(Double(breadBurgerStepperLabel.text!)!))
+            newCustomer.chickenFingers = NSNumber(value: Int(Double(chickenFingersStepperLabel.text!)!))
+            newCustomer.samosa = NSNumber(value: Int(Double(samosaStepperLabel.text!)!))
+
             
             // lunch dinner
             newCustomer.riceBowl = NSNumber(value: Int(Double(riceBowlStepperLabel.text!)!))
@@ -1551,6 +1723,8 @@ class CustomerOrderDetails: UIViewController {
             newCustomer.soojiHalwa = NSNumber(value: Int(Double(soojiHalwaStepperLabel.text!)!))
             newCustomer.coffeePopsicle = NSNumber(value: Int(Double(coffeePopsicleStepperLabel.text!)!))
             newCustomer.iceCream = NSNumber(value: Int(Double(iceCreamStepperLabel.text!)!))
+            newCustomer.waffles = NSNumber(value: Int(Double(wafflesStepperLabel.text!)!))
+            newCustomer.nutellaWaffles = NSNumber(value: Int(Double(nutellaWafflesStepperLabel.text!)!))
 
             do {
                 try context.save()
@@ -1625,7 +1799,16 @@ class CustomerOrderDetails: UIViewController {
                         customer.pasta = NSNumber(value: Int(Double(pastaStepperLabel.text!)!))
                         customer.noodles = NSNumber(value: Int(Double(noodlesStepperLabel.text!)!))
                         customer.vegBurger = NSNumber(value: Int(Double(vegBurgerStepperLabel.text!)!))
+                        customer.chickenBurger = NSNumber(value: Int(Double(chickenBurgerStepperLabel.text!)!))
                         customer.siddu = NSNumber(value: Int(Double(sidduStepperLabel.text!)!))
+                        customer.vegMomo = NSNumber(value: Int(Double(vegMomoStepperLabel.text!)!))
+                        customer.chickenMomo = NSNumber(value: Int(Double(chickenMomoStepperLabel.text!)!))
+                        customer.vegNuggets = NSNumber(value: Int(Double(vegNuggetsStepperLabel.text!)!))
+                        customer.chickenNuggets = NSNumber(value: Int(Double(chickenNuggetsStepperLabel.text!)!))
+                        customer.springRoll = NSNumber(value: Int(Double(springRollStepperLabel.text!)!))
+                        customer.breadBurger = NSNumber(value: Int(Double(breadBurgerStepperLabel.text!)!))
+                        customer.chickenFingers = NSNumber(value: Int(Double(chickenFingersStepperLabel.text!)!))
+                        customer.samosa = NSNumber(value: Int(Double(samosaStepperLabel.text!)!))
                         
                         // lunch dinner
                         customer.riceBowl = NSNumber(value: Int(Double(riceBowlStepperLabel.text!)!))
@@ -1680,6 +1863,8 @@ class CustomerOrderDetails: UIViewController {
                         customer.soojiHalwa = NSNumber(value: Int(Double(soojiHalwaStepperLabel.text!)!))
                         customer.coffeePopsicle = NSNumber(value: Int(Double(coffeePopsicleStepperLabel.text!)!))
                         customer.iceCream = NSNumber(value: Int(Double(iceCreamStepperLabel.text!)!))
+                        customer.waffles = NSNumber(value: Int(Double(wafflesStepperLabel.text!)!))
+                        customer.nutellaWaffles = NSNumber(value: Int(Double(nutellaWafflesStepperLabel.text!)!))
                                                 
 
                         try context.save()
@@ -1694,34 +1879,80 @@ class CustomerOrderDetails: UIViewController {
         }
     }
     @IBAction func deleteCustomer(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
-        print("deletttting")
-        do {
-            print("deleting")
-            let results:NSArray = try context.fetch(request) as NSArray
-            for result in results
-            {
-                let customer = result as! Customer
-                if(customer == selectedCustomer)
+        
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure ?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+             print("Ok button tapped")
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
+            print("deletttting")
+            do {
+                print("deleting")
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results
                 {
-                    customer.deletedDate = Date()
-                    try context.save()
-                    navigationController?.popViewController(animated: true)
+                    let customer = result as! Customer
+                    if(customer == self.selectedCustomer)
+                    {
+                        customer.deletedDate = Date()
+                        try context.save()
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 }
             }
+            catch
+            {
+                print("Fetch Failed")
+            }
+             
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
         }
-        catch
-        {
-            print("Fetch Failed")
-        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+        //
+        //
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
+//        print("deletttting")
+//        do {
+//            print("deleting")
+//            let results:NSArray = try context.fetch(request) as NSArray
+//            for result in results
+//            {
+//                let customer = result as! Customer
+//                if(customer == selectedCustomer)
+//                {
+//                    customer.deletedDate = Date()
+//                    try context.save()
+//                    navigationController?.popViewController(animated: true)
+//                }
+//            }
+//        }
+//        catch
+//        {
+//            print("Fetch Failed")
+//        }
     }
     @IBOutlet weak var dishesScrollView: UIScrollView!
         
     private func setupMenuCard()
     {
-        dishesScrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 1600)
+        dishesScrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 1900)
         dishesScrollView.backgroundColor = PrimaryColor
         setupHotCategoryView()
         setupColdCategoryView()
@@ -2256,7 +2487,126 @@ class CustomerOrderDetails: UIViewController {
         heightConstraint = iceCreamStepper.heightAnchor.constraint(equalTo: IceCreamView.heightAnchor)
         verticalConstraint = iceCreamStepper.centerYAnchor.constraint(equalTo: IceCreamView.centerYAnchor)
         view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+        
+        //
+        //
+        //
+        //
+        // Waffles SUB VIEW
+        let WafflesView = UIView()
+        WafflesView.backgroundColor = .clear
+        DessertsCategoryView.addSubview(WafflesView)
 
+        // Waffles SUB VIEW LAYOUT
+        WafflesView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = WafflesView.leadingAnchor.constraint(equalTo: DessertsCategoryView.leadingAnchor,constant: 20)
+        topConstraint = WafflesView.topAnchor.constraint(equalTo: IceCreamView.bottomAnchor,constant: 5)
+        widthConstraint = WafflesView.widthAnchor.constraint(equalTo: DessertsCategoryView.widthAnchor,constant: -40)
+        heightConstraint = WafflesView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // Waffles LABEL
+        let waffles = UILabel()
+        waffles.text = "Waffles [Rs. 180]"
+        addDishesConstraints(DishLabel: waffles)
+        WafflesView.addSubview(waffles)
+
+        // Waffles LABEL LAYOUT
+        waffles.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = waffles.leadingAnchor.constraint(equalTo: WafflesView.leadingAnchor)
+        topConstraint = waffles.topAnchor.constraint(equalTo: WafflesView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // Waffles STEPPER
+        wafflesStepper.value = Double(wafflesStepperLabelCounter)
+        addStepperConstraints(stepper: wafflesStepper)
+        wafflesStepper.addTarget(self, action: #selector(updateWafflesStepper(_: )), for: .valueChanged)
+
+        // Waffles STEPPER LABEL
+        addStepperLabelConstrainsts(label: wafflesStepperLabel, stepper: wafflesStepper)
+        WafflesView.addSubview(wafflesStepperLabel)
+
+
+        // Waffles STEPPER LABEL LAYOUT FIRST
+        wafflesStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = wafflesStepperLabel.trailingAnchor.constraint(equalTo: WafflesView.trailingAnchor)
+        topConstraint = wafflesStepperLabel.topAnchor.constraint(equalTo: WafflesView.topAnchor)
+        widthConstraint = wafflesStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = wafflesStepperLabel.heightAnchor.constraint(equalTo: WafflesView.heightAnchor)
+        verticalConstraint = wafflesStepperLabel.centerYAnchor.constraint(equalTo: WafflesView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // Waffles STEPPER LAYOUT SECOND
+        WafflesView.addSubview(wafflesStepper)
+        wafflesStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = wafflesStepper.trailingAnchor.constraint(equalTo: wafflesStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = wafflesStepper.topAnchor.constraint(equalTo: WafflesView.topAnchor,constant: 2)
+        bottomConstraint = wafflesStepper.bottomAnchor.constraint(equalTo: WafflesView.bottomAnchor,constant: 2)
+        heightConstraint = wafflesStepper.heightAnchor.constraint(equalTo: WafflesView.heightAnchor)
+        verticalConstraint = wafflesStepper.centerYAnchor.constraint(equalTo: WafflesView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // NutellaWaffles SUB VIEW
+        let NutellaWafflesView = UIView()
+        NutellaWafflesView.backgroundColor = .clear
+        DessertsCategoryView.addSubview(NutellaWafflesView)
+
+        // NutellaWaffles SUB VIEW LAYOUT
+        NutellaWafflesView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = NutellaWafflesView.leadingAnchor.constraint(equalTo: DessertsCategoryView.leadingAnchor,constant: 20)
+        topConstraint = NutellaWafflesView.topAnchor.constraint(equalTo: WafflesView.bottomAnchor,constant: 5)
+        widthConstraint = NutellaWafflesView.widthAnchor.constraint(equalTo: DessertsCategoryView.widthAnchor,constant: -40)
+        heightConstraint = NutellaWafflesView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // NutellaWaffles LABEL
+        let nutellaWaffles = UILabel()
+        nutellaWaffles.text = "Nutella Waffles [Rs. 250]"
+        addDishesConstraints(DishLabel: nutellaWaffles)
+        NutellaWafflesView.addSubview(nutellaWaffles)
+
+        // NutellaWaffles LABEL LAYOUT
+        nutellaWaffles.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = nutellaWaffles.leadingAnchor.constraint(equalTo: NutellaWafflesView.leadingAnchor)
+        topConstraint = nutellaWaffles.topAnchor.constraint(equalTo: NutellaWafflesView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // NutellaWaffles STEPPER
+        nutellaWafflesStepper.value = Double(nutellaWafflesStepperLabelCounter)
+        addStepperConstraints(stepper: nutellaWafflesStepper)
+        nutellaWafflesStepper.addTarget(self, action: #selector(updateNutellaWafflesStepper(_: )), for: .valueChanged)
+
+        // NutellaWaffles STEPPER LABEL
+        addStepperLabelConstrainsts(label: nutellaWafflesStepperLabel, stepper: nutellaWafflesStepper)
+        NutellaWafflesView.addSubview(nutellaWafflesStepperLabel)
+
+
+        // NutellaWaffles STEPPER LABEL LAYOUT FIRST
+        nutellaWafflesStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = nutellaWafflesStepperLabel.trailingAnchor.constraint(equalTo: NutellaWafflesView.trailingAnchor)
+        topConstraint = nutellaWafflesStepperLabel.topAnchor.constraint(equalTo: NutellaWafflesView.topAnchor)
+        widthConstraint = nutellaWafflesStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = nutellaWafflesStepperLabel.heightAnchor.constraint(equalTo: NutellaWafflesView.heightAnchor)
+        verticalConstraint = nutellaWafflesStepperLabel.centerYAnchor.constraint(equalTo: NutellaWafflesView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // NutellaWaffles STEPPER LAYOUT SECOND
+        NutellaWafflesView.addSubview(nutellaWafflesStepper)
+        nutellaWafflesStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = nutellaWafflesStepper.trailingAnchor.constraint(equalTo: nutellaWafflesStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = nutellaWafflesStepper.topAnchor.constraint(equalTo: NutellaWafflesView.topAnchor,constant: 2)
+        bottomConstraint = nutellaWafflesStepper.bottomAnchor.constraint(equalTo: NutellaWafflesView.bottomAnchor,constant: 2)
+        heightConstraint = nutellaWafflesStepper.heightAnchor.constraint(equalTo: NutellaWafflesView.heightAnchor)
+        verticalConstraint = nutellaWafflesStepper.centerYAnchor.constraint(equalTo: NutellaWafflesView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
 
     }
     
@@ -3895,7 +4245,7 @@ class CustomerOrderDetails: UIViewController {
 
         // Cornflakes LABEL
         let cornflakes = UILabel()
-        cornflakes.text = "Cornflakes [Rs. 150]"
+        cornflakes.text = "Cornflakes [Rs. 120]"
         addDishesConstraints(DishLabel: cornflakes)
         CornflakesView.addSubview(cornflakes)
 
@@ -3955,7 +4305,7 @@ class CustomerOrderDetails: UIViewController {
 
         // Chocos LABEL
         let chocos = UILabel()
-        chocos.text = "Chocos [Rs. 150]"
+        chocos.text = "Chocos [Rs. 120]"
         addDishesConstraints(DishLabel: chocos)
         ChocosView.addSubview(chocos)
 
@@ -4588,7 +4938,7 @@ class CustomerOrderDetails: UIViewController {
         var leadingConstraint = SnacksCategoryView.leadingAnchor.constraint(equalTo: dishesScrollView.leadingAnchor,constant: dishesScrollView.frame.width/2 )
         var topConstraint = SnacksCategoryView.topAnchor.constraint(equalTo: ColdCategoryView.bottomAnchor)
         var widthConstraint = SnacksCategoryView.widthAnchor.constraint(equalToConstant: dishesScrollView.frame.width/2 )
-        var heightConstraint = SnacksCategoryView.heightAnchor.constraint(equalToConstant: 1010)
+        var heightConstraint = SnacksCategoryView.heightAnchor.constraint(equalToConstant: 1400)
         view.addConstraints([ leadingConstraint,  topConstraint, widthConstraint, heightConstraint])
 
         // SNACKS CATEGORY LABEL
@@ -5807,6 +6157,65 @@ class CustomerOrderDetails: UIViewController {
         heightConstraint = vegBurgerStepper.heightAnchor.constraint(equalTo: VegBurgerView.heightAnchor)
         verticalConstraint = vegBurgerStepper.centerYAnchor.constraint(equalTo: VegBurgerView.centerYAnchor)
         view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+        
+        //
+        //
+        //
+        //
+        // Chicken Burger SUB VIEW
+        let ChickenBurgerView = UIView()
+        ChickenBurgerView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(ChickenBurgerView)
+
+        // Chicken Burger SUB VIEW LAYOUT
+        ChickenBurgerView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = ChickenBurgerView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = ChickenBurgerView.topAnchor.constraint(equalTo: VegBurgerView.bottomAnchor,constant: 5)
+        widthConstraint = ChickenBurgerView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = ChickenBurgerView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+        // Chicken Burger LABEL
+        let chickenBurger = UILabel()
+        chickenBurger.text = "Chicken Burger [Rs. 200]"
+        addDishesConstraints(DishLabel: chickenBurger)
+        ChickenBurgerView.addSubview(chickenBurger)
+
+        // Chicken Burger LABEL LAYOUT
+        chickenBurger.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = chickenBurger.leadingAnchor.constraint(equalTo: ChickenBurgerView.leadingAnchor)
+        topConstraint = chickenBurger.topAnchor.constraint(equalTo: ChickenBurgerView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // Chicken Burger STEPPER
+        chickenBurgerStepper.value = Double(chickenBurgerStepperLabelCounter)
+        addStepperConstraints(stepper: chickenBurgerStepper)
+        chickenBurgerStepper.addTarget(self, action: #selector(updateChickenBurgerStepper(_: )), for: .valueChanged)
+
+        // Chicken Burger STEPPER LABEL
+        addStepperLabelConstrainsts(label: chickenBurgerStepperLabel, stepper: chickenBurgerStepper)
+        ChickenBurgerView.addSubview(chickenBurgerStepperLabel)
+
+
+        // Chicken Burger STEPPER LABEL LAYOUT FIRST
+        chickenBurgerStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenBurgerStepperLabel.trailingAnchor.constraint(equalTo: ChickenBurgerView.trailingAnchor)
+        topConstraint = chickenBurgerStepperLabel.topAnchor.constraint(equalTo: ChickenBurgerView.topAnchor)
+        widthConstraint = chickenBurgerStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = chickenBurgerStepperLabel.heightAnchor.constraint(equalTo: ChickenBurgerView.heightAnchor)
+        verticalConstraint = chickenBurgerStepperLabel.centerYAnchor.constraint(equalTo: ChickenBurgerView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // Chicken Burger STEPPER LAYOUT SECOND
+        ChickenBurgerView.addSubview(chickenBurgerStepper)
+        chickenBurgerStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenBurgerStepper.trailingAnchor.constraint(equalTo: chickenBurgerStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = chickenBurgerStepper.topAnchor.constraint(equalTo: ChickenBurgerView.topAnchor,constant: 2)
+        bottomConstraint = chickenBurgerStepper.bottomAnchor.constraint(equalTo: ChickenBurgerView.bottomAnchor,constant: 2)
+        heightConstraint = chickenBurgerStepper.heightAnchor.constraint(equalTo: ChickenBurgerView.heightAnchor)
+        verticalConstraint = chickenBurgerStepper.centerYAnchor.constraint(equalTo: ChickenBurgerView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
 
         //
         //
@@ -5820,7 +6229,7 @@ class CustomerOrderDetails: UIViewController {
         // Siddu SUB VIEW LAYOUT
         SidduView.translatesAutoresizingMaskIntoConstraints = false
         leadingConstraint = SidduView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
-        topConstraint = SidduView.topAnchor.constraint(equalTo: VegBurgerView.bottomAnchor,constant: 5)
+        topConstraint = SidduView.topAnchor.constraint(equalTo: ChickenBurgerView.bottomAnchor,constant: 5)
         widthConstraint = SidduView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
         heightConstraint = SidduView.heightAnchor.constraint(equalToConstant: 40)
         view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
@@ -5867,7 +6276,489 @@ class CustomerOrderDetails: UIViewController {
         heightConstraint =  sidduStepper.heightAnchor.constraint(equalTo: SidduView.heightAnchor)
         verticalConstraint =  sidduStepper.centerYAnchor.constraint(equalTo: SidduView.centerYAnchor)
         view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+        
+        //
+        //
+        //
+        //
+        // Veg Momo SUB VIEW
+        let VegMomoView = UIView()
+        VegMomoView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(VegMomoView)
 
+        // Veg Momo SUB VIEW LAYOUT
+        VegMomoView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = VegMomoView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = VegMomoView.topAnchor.constraint(equalTo: SidduView.bottomAnchor,constant: 5)
+        widthConstraint = VegMomoView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = VegMomoView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+        // Veg momo LABEL
+        let vegMomo = UILabel()
+        vegMomo.text = "Veg momo [Rs. 130]"
+        addDishesConstraints(DishLabel: vegMomo)
+        VegMomoView.addSubview(vegMomo)
+
+        // Veg momo LABEL LAYOUT
+        vegMomo.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = vegMomo.leadingAnchor.constraint(equalTo: VegMomoView.leadingAnchor)
+        topConstraint = vegMomo.topAnchor.constraint(equalTo: VegMomoView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // Veg momo STEPPER
+        vegMomoStepper.value = Double(vegMomoStepperLabelCounter)
+        addStepperConstraints(stepper: vegMomoStepper)
+        vegMomoStepper.addTarget(self, action: #selector(updateVegMomoStepper(_: )), for: .valueChanged)
+
+        // Veg momo STEPPER LABEL
+        addStepperLabelConstrainsts(label: vegMomoStepperLabel, stepper: vegMomoStepper)
+        VegMomoView.addSubview(vegMomoStepperLabel)
+
+
+        // Veg momo STEPPER LABEL LAYOUT FIRST
+        vegMomoStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = vegMomoStepperLabel.trailingAnchor.constraint(equalTo: VegMomoView.trailingAnchor)
+        topConstraint = vegMomoStepperLabel.topAnchor.constraint(equalTo: VegMomoView.topAnchor)
+        widthConstraint = vegMomoStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = vegMomoStepperLabel.heightAnchor.constraint(equalTo: VegMomoView.heightAnchor)
+        verticalConstraint = vegMomoStepperLabel.centerYAnchor.constraint(equalTo: VegMomoView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // Veg momo STEPPER LAYOUT SECOND
+        VegMomoView.addSubview(vegMomoStepper)
+        vegMomoStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = vegMomoStepper.trailingAnchor.constraint(equalTo: vegMomoStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = vegMomoStepper.topAnchor.constraint(equalTo: VegMomoView.topAnchor,constant: 2)
+        bottomConstraint = vegMomoStepper.bottomAnchor.constraint(equalTo: VegMomoView.bottomAnchor,constant: 2)
+        heightConstraint = vegMomoStepper.heightAnchor.constraint(equalTo: VegMomoView.heightAnchor)
+        verticalConstraint = vegMomoStepper.centerYAnchor.constraint(equalTo: VegMomoView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // Chicken Momo SUB VIEW
+        let ChickenMomoView = UIView()
+        ChickenMomoView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(ChickenMomoView)
+
+        // Chicken Momo SUB VIEW LAYOUT
+        ChickenMomoView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = ChickenMomoView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = ChickenMomoView.topAnchor.constraint(equalTo: VegMomoView.bottomAnchor,constant: 5)
+        widthConstraint = ChickenMomoView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = ChickenMomoView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // Chicken Momo LABEL
+        let chickenMomo = UILabel()
+        chickenMomo.text = "Chicken Momo [Rs. 160]"
+        addDishesConstraints(DishLabel: chickenMomo)
+        ChickenMomoView.addSubview(chickenMomo)
+
+        // Chicken Momo LABEL LAYOUT
+        chickenMomo.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = chickenMomo.leadingAnchor.constraint(equalTo: ChickenMomoView.leadingAnchor)
+        topConstraint = chickenMomo.topAnchor.constraint(equalTo: ChickenMomoView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // Chicken Momo STEPPER
+        chickenMomoStepper.value = Double(chickenMomoStepperLabelCounter)
+        addStepperConstraints(stepper: chickenMomoStepper)
+        chickenMomoStepper.addTarget(self, action: #selector(updateChickenMomoStepper(_: )), for: .valueChanged)
+
+        // Chicken Momo STEPPER LABEL
+        addStepperLabelConstrainsts(label: chickenMomoStepperLabel, stepper: chickenMomoStepper)
+        ChickenMomoView.addSubview(chickenMomoStepperLabel)
+
+
+        // Chicken Momo STEPPER LABEL LAYOUT FIRST
+        chickenMomoStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenMomoStepperLabel.trailingAnchor.constraint(equalTo: ChickenMomoView.trailingAnchor)
+        topConstraint = chickenMomoStepperLabel.topAnchor.constraint(equalTo: ChickenMomoView.topAnchor)
+        widthConstraint = chickenMomoStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = chickenMomoStepperLabel.heightAnchor.constraint(equalTo: ChickenMomoView.heightAnchor)
+        verticalConstraint = chickenMomoStepperLabel.centerYAnchor.constraint(equalTo: ChickenMomoView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // Chicken Momo STEPPER LAYOUT SECOND
+        ChickenMomoView.addSubview(chickenMomoStepper)
+        chickenMomoStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenMomoStepper.trailingAnchor.constraint(equalTo: chickenMomoStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = chickenMomoStepper.topAnchor.constraint(equalTo: ChickenMomoView.topAnchor,constant: 2)
+        bottomConstraint = chickenMomoStepper.bottomAnchor.constraint(equalTo: ChickenMomoView.bottomAnchor,constant: 2)
+        heightConstraint = chickenMomoStepper.heightAnchor.constraint(equalTo: ChickenMomoView.heightAnchor)
+        verticalConstraint = chickenMomoStepper.centerYAnchor.constraint(equalTo: ChickenMomoView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // VegNuggets SUB VIEW
+        let VegNuggetsView = UIView()
+        VegNuggetsView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(VegNuggetsView)
+
+        // VegNuggets SUB VIEW LAYOUT
+        VegNuggetsView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = VegNuggetsView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = VegNuggetsView.topAnchor.constraint(equalTo: ChickenMomoView.bottomAnchor,constant: 5)
+        widthConstraint = VegNuggetsView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = VegNuggetsView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // VegNuggets LABEL
+        let vegNuggets = UILabel()
+        vegNuggets.text = "Veg Nuggets [Rs. 180]"
+        addDishesConstraints(DishLabel: vegNuggets)
+        VegNuggetsView.addSubview(vegNuggets)
+
+        // VegNuggets LABEL LAYOUT
+        vegNuggets.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = vegNuggets.leadingAnchor.constraint(equalTo: VegNuggetsView.leadingAnchor)
+        topConstraint = vegNuggets.topAnchor.constraint(equalTo: VegNuggetsView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // VegNuggets STEPPER
+        vegNuggetsStepper.value = Double(vegNuggetsStepperLabelCounter)
+        addStepperConstraints(stepper: vegNuggetsStepper)
+        vegNuggetsStepper.addTarget(self, action: #selector(updateVegNuggetsStepper(_: )), for: .valueChanged)
+
+        // VegNuggets STEPPER LABEL
+        addStepperLabelConstrainsts(label: vegNuggetsStepperLabel, stepper: vegNuggetsStepper)
+        VegNuggetsView.addSubview(vegNuggetsStepperLabel)
+
+
+        // VegNuggets STEPPER LABEL LAYOUT FIRST
+        vegNuggetsStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = vegNuggetsStepperLabel.trailingAnchor.constraint(equalTo: VegNuggetsView.trailingAnchor)
+        topConstraint = vegNuggetsStepperLabel.topAnchor.constraint(equalTo: VegNuggetsView.topAnchor)
+        widthConstraint = vegNuggetsStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = vegNuggetsStepperLabel.heightAnchor.constraint(equalTo: VegNuggetsView.heightAnchor)
+        verticalConstraint = vegNuggetsStepperLabel.centerYAnchor.constraint(equalTo: VegNuggetsView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // VegNuggets STEPPER LAYOUT SECOND
+        VegNuggetsView.addSubview(vegNuggetsStepper)
+        vegNuggetsStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = vegNuggetsStepper.trailingAnchor.constraint(equalTo: vegNuggetsStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = vegNuggetsStepper.topAnchor.constraint(equalTo: VegNuggetsView.topAnchor,constant: 2)
+        bottomConstraint = vegNuggetsStepper.bottomAnchor.constraint(equalTo: VegNuggetsView.bottomAnchor,constant: 2)
+        heightConstraint = vegNuggetsStepper.heightAnchor.constraint(equalTo: VegNuggetsView.heightAnchor)
+        verticalConstraint = vegNuggetsStepper.centerYAnchor.constraint(equalTo: VegNuggetsView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // ChickenNuggets SUB VIEW
+        let ChickenNuggetsView = UIView()
+        ChickenNuggetsView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(ChickenNuggetsView)
+
+        // ChickenNuggets SUB VIEW LAYOUT
+        ChickenNuggetsView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = ChickenNuggetsView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = ChickenNuggetsView.topAnchor.constraint(equalTo: VegNuggetsView.bottomAnchor,constant: 5)
+        widthConstraint = ChickenNuggetsView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = ChickenNuggetsView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // ChickenNuggets LABEL
+        let  chickenNuggets = UILabel()
+            chickenNuggets.text = "Chicken Nuggets [Rs. 250]"
+        addDishesConstraints(DishLabel:  chickenNuggets)
+        ChickenNuggetsView.addSubview( chickenNuggets)
+
+        // ChickenNuggets LABEL LAYOUT
+            chickenNuggets.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint =  chickenNuggets.leadingAnchor.constraint(equalTo: ChickenNuggetsView.leadingAnchor)
+        topConstraint =  chickenNuggets.topAnchor.constraint(equalTo: ChickenNuggetsView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // ChickenNuggets STEPPER
+            chickenNuggetsStepper.value = Double( chickenNuggetsStepperLabelCounter)
+        addStepperConstraints(stepper:  chickenNuggetsStepper)
+            chickenNuggetsStepper.addTarget(self, action: #selector(updateChickenNuggetsStepper(_: )), for: .valueChanged)
+
+        // ChickenNuggets STEPPER LABEL
+        addStepperLabelConstrainsts(label:  chickenNuggetsStepperLabel, stepper:  chickenNuggetsStepper)
+        ChickenNuggetsView.addSubview( chickenNuggetsStepperLabel)
+
+
+        // ChickenNuggets STEPPER LABEL LAYOUT FIRST
+            chickenNuggetsStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint =  chickenNuggetsStepperLabel.trailingAnchor.constraint(equalTo: ChickenNuggetsView.trailingAnchor)
+        topConstraint =  chickenNuggetsStepperLabel.topAnchor.constraint(equalTo: ChickenNuggetsView.topAnchor)
+        widthConstraint =  chickenNuggetsStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint =  chickenNuggetsStepperLabel.heightAnchor.constraint(equalTo: ChickenNuggetsView.heightAnchor)
+        verticalConstraint =  chickenNuggetsStepperLabel.centerYAnchor.constraint(equalTo: ChickenNuggetsView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // ChickenNuggets STEPPER LAYOUT SECOND
+        ChickenNuggetsView.addSubview( chickenNuggetsStepper)
+            chickenNuggetsStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint =  chickenNuggetsStepper.trailingAnchor.constraint(equalTo:  chickenNuggetsStepperLabel.leadingAnchor,constant: -15)
+        topConstraint =  chickenNuggetsStepper.topAnchor.constraint(equalTo: ChickenNuggetsView.topAnchor,constant: 2)
+        bottomConstraint =  chickenNuggetsStepper.bottomAnchor.constraint(equalTo: ChickenNuggetsView.bottomAnchor,constant: 2)
+        heightConstraint =  chickenNuggetsStepper.heightAnchor.constraint(equalTo: ChickenNuggetsView.heightAnchor)
+        verticalConstraint =  chickenNuggetsStepper.centerYAnchor.constraint(equalTo: ChickenNuggetsView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // SpringRoll SUB VIEW
+        let SpringRollView = UIView()
+        SpringRollView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(SpringRollView)
+
+        // SpringRoll SUB VIEW LAYOUT
+        SpringRollView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = SpringRollView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = SpringRollView.topAnchor.constraint(equalTo: ChickenNuggetsView.bottomAnchor,constant: 5)
+        widthConstraint = SpringRollView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = SpringRollView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // SpringRoll LABEL
+        let springRoll = UILabel()
+        springRoll.text = "Spring Roll [Rs. 120]"
+        addDishesConstraints(DishLabel: springRoll)
+        SpringRollView.addSubview(springRoll)
+
+        // SpringRoll LABEL LAYOUT
+        springRoll.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = springRoll.leadingAnchor.constraint(equalTo: SpringRollView.leadingAnchor)
+        topConstraint = springRoll.topAnchor.constraint(equalTo: SpringRollView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // SpringRoll STEPPER
+        springRollStepper.value = Double(springRollStepperLabelCounter)
+        addStepperConstraints(stepper: springRollStepper)
+        springRollStepper.addTarget(self, action: #selector(updateSpringRollStepper(_: )), for: .valueChanged)
+
+        // SpringRoll STEPPER LABEL
+        addStepperLabelConstrainsts(label: springRollStepperLabel, stepper: springRollStepper)
+        SpringRollView.addSubview(springRollStepperLabel)
+
+
+        // SpringRoll STEPPER LABEL LAYOUT FIRST
+        springRollStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = springRollStepperLabel.trailingAnchor.constraint(equalTo: SpringRollView.trailingAnchor)
+        topConstraint = springRollStepperLabel.topAnchor.constraint(equalTo: SpringRollView.topAnchor)
+        widthConstraint = springRollStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = springRollStepperLabel.heightAnchor.constraint(equalTo: SpringRollView.heightAnchor)
+        verticalConstraint = springRollStepperLabel.centerYAnchor.constraint(equalTo: SpringRollView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // SpringRoll STEPPER LAYOUT SECOND
+        SpringRollView.addSubview(springRollStepper)
+        springRollStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = springRollStepper.trailingAnchor.constraint(equalTo: springRollStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = springRollStepper.topAnchor.constraint(equalTo: SpringRollView.topAnchor,constant: 2)
+        bottomConstraint = springRollStepper.bottomAnchor.constraint(equalTo: SpringRollView.bottomAnchor,constant: 2)
+        heightConstraint = springRollStepper.heightAnchor.constraint(equalTo: SpringRollView.heightAnchor)
+        verticalConstraint = springRollStepper.centerYAnchor.constraint(equalTo: SpringRollView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+
+        //
+        //
+        //
+        //
+        // BreadBurger SUB VIEW
+        let BreadBurgerView = UIView()
+        BreadBurgerView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(BreadBurgerView)
+
+        // BreadBurger SUB VIEW LAYOUT
+        BreadBurgerView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = BreadBurgerView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = BreadBurgerView.topAnchor.constraint(equalTo: SpringRollView.bottomAnchor,constant: 5)
+        widthConstraint = BreadBurgerView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = BreadBurgerView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // BreadBurger LABEL
+        let breadBurger = UILabel()
+        breadBurger.text = "Bread Burger [Rs. 130]"
+        addDishesConstraints(DishLabel: breadBurger)
+        BreadBurgerView.addSubview(breadBurger)
+
+        // BreadBurger LABEL LAYOUT
+        breadBurger.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = breadBurger.leadingAnchor.constraint(equalTo: BreadBurgerView.leadingAnchor)
+        topConstraint = breadBurger.topAnchor.constraint(equalTo: BreadBurgerView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // BreadBurger STEPPER
+        breadBurgerStepper.value = Double(breadBurgerStepperLabelCounter)
+        addStepperConstraints(stepper: breadBurgerStepper)
+        breadBurgerStepper.addTarget(self, action: #selector(updateBreadBurgerStepper(_: )), for: .valueChanged)
+
+        // BreadBurger STEPPER LABEL
+        addStepperLabelConstrainsts(label: breadBurgerStepperLabel, stepper: breadBurgerStepper)
+        BreadBurgerView.addSubview(breadBurgerStepperLabel)
+
+
+        // BreadBurger STEPPER LABEL LAYOUT FIRST
+        breadBurgerStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = breadBurgerStepperLabel.trailingAnchor.constraint(equalTo: BreadBurgerView.trailingAnchor)
+        topConstraint = breadBurgerStepperLabel.topAnchor.constraint(equalTo: BreadBurgerView.topAnchor)
+        widthConstraint = breadBurgerStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = breadBurgerStepperLabel.heightAnchor.constraint(equalTo: BreadBurgerView.heightAnchor)
+        verticalConstraint = breadBurgerStepperLabel.centerYAnchor.constraint(equalTo: BreadBurgerView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // BreadBurger STEPPER LAYOUT SECOND
+        BreadBurgerView.addSubview(breadBurgerStepper)
+        breadBurgerStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = breadBurgerStepper.trailingAnchor.constraint(equalTo: breadBurgerStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = breadBurgerStepper.topAnchor.constraint(equalTo: BreadBurgerView.topAnchor,constant: 2)
+        bottomConstraint = breadBurgerStepper.bottomAnchor.constraint(equalTo: BreadBurgerView.bottomAnchor,constant: 2)
+        heightConstraint = breadBurgerStepper.heightAnchor.constraint(equalTo: BreadBurgerView.heightAnchor)
+        verticalConstraint = breadBurgerStepper.centerYAnchor.constraint(equalTo: BreadBurgerView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // ChickenFingers SUB VIEW
+        let ChickenFingersView = UIView()
+        ChickenFingersView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(ChickenFingersView)
+
+        // ChickenFingers SUB VIEW LAYOUT
+        ChickenFingersView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = ChickenFingersView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = ChickenFingersView.topAnchor.constraint(equalTo: BreadBurgerView.bottomAnchor,constant: 5)
+        widthConstraint = ChickenFingersView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = ChickenFingersView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // ChickenFingers LABEL
+        let chickenFingers = UILabel()
+        chickenFingers.text = "Chicken Fingers [Rs. 250]"
+        addDishesConstraints(DishLabel: chickenFingers)
+        ChickenFingersView.addSubview(chickenFingers)
+
+        // ChickenFingers LABEL LAYOUT
+        chickenFingers.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = chickenFingers.leadingAnchor.constraint(equalTo: ChickenFingersView.leadingAnchor)
+        topConstraint = chickenFingers.topAnchor.constraint(equalTo: ChickenFingersView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // ChickenFingers STEPPER
+        chickenFingersStepper.value = Double(chickenFingersStepperLabelCounter)
+        addStepperConstraints(stepper: chickenFingersStepper)
+        chickenFingersStepper.addTarget(self, action: #selector(updateChickenFingersStepper(_: )), for: .valueChanged)
+
+        // ChickenFingers STEPPER LABEL
+        addStepperLabelConstrainsts(label: chickenFingersStepperLabel, stepper: chickenFingersStepper)
+        ChickenFingersView.addSubview(chickenFingersStepperLabel)
+
+
+        // ChickenFingers STEPPER LABEL LAYOUT FIRST
+        chickenFingersStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenFingersStepperLabel.trailingAnchor.constraint(equalTo: ChickenFingersView.trailingAnchor)
+        topConstraint = chickenFingersStepperLabel.topAnchor.constraint(equalTo: ChickenFingersView.topAnchor)
+        widthConstraint = chickenFingersStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint = chickenFingersStepperLabel.heightAnchor.constraint(equalTo: ChickenFingersView.heightAnchor)
+        verticalConstraint = chickenFingersStepperLabel.centerYAnchor.constraint(equalTo: ChickenFingersView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // ChickenFingers STEPPER LAYOUT SECOND
+        ChickenFingersView.addSubview(chickenFingersStepper)
+        chickenFingersStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint = chickenFingersStepper.trailingAnchor.constraint(equalTo: chickenFingersStepperLabel.leadingAnchor,constant: -15)
+        topConstraint = chickenFingersStepper.topAnchor.constraint(equalTo: ChickenFingersView.topAnchor,constant: 2)
+        bottomConstraint = chickenFingersStepper.bottomAnchor.constraint(equalTo: ChickenFingersView.bottomAnchor,constant: 2)
+        heightConstraint = chickenFingersStepper.heightAnchor.constraint(equalTo: ChickenFingersView.heightAnchor)
+        verticalConstraint = chickenFingersStepper.centerYAnchor.constraint(equalTo: ChickenFingersView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+        //
+        //
+        //
+        //
+        // Samosa SUB VIEW
+        let SamosaView = UIView()
+        SamosaView.backgroundColor = .clear
+        SnacksCategoryView.addSubview(SamosaView)
+
+        // Samosa SUB VIEW LAYOUT
+        SamosaView.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint = SamosaView.leadingAnchor.constraint(equalTo: SnacksCategoryView.leadingAnchor,constant: 20)
+        topConstraint = SamosaView.topAnchor.constraint(equalTo: ChickenFingersView.bottomAnchor,constant: 5)
+        widthConstraint = SamosaView.widthAnchor.constraint(equalTo: SnacksCategoryView.widthAnchor,constant: -40)
+        heightConstraint = SamosaView.heightAnchor.constraint(equalToConstant: 40)
+        view.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint])
+
+
+        // Samosa LABEL
+        let  samosa = UILabel()
+            samosa.text = "Samosa [Rs. 90]"
+        addDishesConstraints(DishLabel:  samosa)
+        SamosaView.addSubview( samosa)
+
+        // Samosa LABEL LAYOUT
+            samosa.translatesAutoresizingMaskIntoConstraints = false
+        leadingConstraint =  samosa.leadingAnchor.constraint(equalTo: SamosaView.leadingAnchor)
+        topConstraint =  samosa.topAnchor.constraint(equalTo: SamosaView.topAnchor)
+        view.addConstraints([leadingConstraint, topConstraint])
+
+        // Samosa STEPPER
+            samosaStepper.value = Double( samosaStepperLabelCounter)
+        addStepperConstraints(stepper:  samosaStepper)
+            samosaStepper.addTarget(self, action: #selector(updateSamosaStepper(_: )), for: .valueChanged)
+
+        // Samosa STEPPER LABEL
+        addStepperLabelConstrainsts(label:  samosaStepperLabel, stepper:  samosaStepper)
+        SamosaView.addSubview( samosaStepperLabel)
+
+
+        // Samosa STEPPER LABEL LAYOUT FIRST
+            samosaStepperLabel.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint =  samosaStepperLabel.trailingAnchor.constraint(equalTo: SamosaView.trailingAnchor)
+        topConstraint =  samosaStepperLabel.topAnchor.constraint(equalTo: SamosaView.topAnchor)
+        widthConstraint =  samosaStepperLabel.widthAnchor.constraint(equalToConstant: 50)
+        heightConstraint =  samosaStepperLabel.heightAnchor.constraint(equalTo: SamosaView.heightAnchor)
+        verticalConstraint =  samosaStepperLabel.centerYAnchor.constraint(equalTo: SamosaView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint,  heightConstraint, widthConstraint,verticalConstraint])
+
+
+        // Samosa STEPPER LAYOUT SECOND
+        SamosaView.addSubview( samosaStepper)
+            samosaStepper.translatesAutoresizingMaskIntoConstraints = false
+        trailingConstraint =  samosaStepper.trailingAnchor.constraint(equalTo:  samosaStepperLabel.leadingAnchor,constant: -15)
+        topConstraint =  samosaStepper.topAnchor.constraint(equalTo: SamosaView.topAnchor,constant: 2)
+        bottomConstraint =  samosaStepper.bottomAnchor.constraint(equalTo: SamosaView.bottomAnchor,constant: 2)
+        heightConstraint =  samosaStepper.heightAnchor.constraint(equalTo: SamosaView.heightAnchor)
+        verticalConstraint =  samosaStepper.centerYAnchor.constraint(equalTo: SamosaView.centerYAnchor)
+        view.addConstraints([trailingConstraint, topConstraint, heightConstraint,verticalConstraint, bottomConstraint])
+
+
+        
 
     }
     

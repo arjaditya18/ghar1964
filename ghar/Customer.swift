@@ -71,7 +71,16 @@ class Customer: NSManagedObject
     @NSManaged var pasta: NSNumber!
     @NSManaged var noodles: NSNumber!
     @NSManaged var vegBurger: NSNumber!
+    @NSManaged var chickenBurger: NSNumber!
     @NSManaged var siddu: NSNumber!
+    @NSManaged var vegMomo: NSNumber!
+    @NSManaged var chickenMomo: NSNumber!
+    @NSManaged var vegNuggets: NSNumber!
+    @NSManaged var chickenNuggets: NSNumber!
+    @NSManaged var springRoll: NSNumber!
+    @NSManaged var breadBurger: NSNumber!
+    @NSManaged var chickenFingers: NSNumber!
+    @NSManaged var samosa: NSNumber!
     
     // Breakfast
     @NSManaged var poha: NSNumber!
@@ -103,6 +112,8 @@ class Customer: NSManagedObject
     @NSManaged var soojiHalwa: NSNumber!
     @NSManaged var coffeePopsicle: NSNumber!
     @NSManaged var iceCream: NSNumber!
+    @NSManaged var waffles: NSNumber!
+    @NSManaged var nutellaWaffles: NSNumber!
     
     // Lunch Dinner
     @NSManaged var riceBowl: NSNumber!
